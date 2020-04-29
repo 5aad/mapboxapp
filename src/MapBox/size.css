@@ -1,4 +1,4 @@
-.sidebarStyle {
+/* .sidebarStyle {
     display: inline-block;
     position: absolute;
     top: 0;
@@ -9,12 +9,12 @@
     z-index: 1 !important;
     padding: 6px;
     font-weight: bold;
-    }
+    } */
   
     .buttonStyle{
       display: inline-block;
     position: absolute;
-    top: 40px;
+    top: 0px;
     left: 0;
     margin: 12px;
   
@@ -28,7 +28,7 @@
         .buttonStyle{
             display: inline-block;
           position: absolute;
-          top: 55px;
+          top: 0px;
           left: 0;
           margin: 12px;
           margin-left: 5px;

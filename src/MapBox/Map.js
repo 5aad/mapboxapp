@@ -65,25 +65,25 @@ class Map extends React.Component {
           zoom: this.state.zoom
           });
   
-          const nav = new mapboxgl.NavigationControl({
-            container: this.mapContainer,
-        })
+          const nav = new mapboxgl.NavigationControl()
         this.map.addControl(nav)
+
+        // Values logic
            
-        this.map.on('move', () => {
-          this.setState({
-          lng: this.map.getCenter().lng.toFixed(4),
-          lat: this.map.getCenter().lat.toFixed(4),
-          zoom: this.map.getZoom().toFixed(2)
-          });
-          });
-          this.map.on('click', () => {
-            this.setState({
-            lng: this.map.getCenter().lng.toFixed(4),
-            lat: this.map.getCenter().lat.toFixed(4),
-            zoom: this.map.getZoom().toFixed(2)
-            });
-            });
+        // this.map.on('move', () => {
+        //   this.setState({
+        //   lng: this.map.getCenter().lng.toFixed(4),
+        //   lat: this.map.getCenter().lat.toFixed(4),
+        //   zoom: this.map.getZoom().toFixed(2)
+        //   });
+        //   });
+        //   this.map.on('click', () => {
+        //     this.setState({
+        //     lng: this.map.getCenter().lng.toFixed(4),
+        //     lat: this.map.getCenter().lat.toFixed(4),
+        //     zoom: this.map.getZoom().toFixed(2)
+        //     });
+        //     });
           this.setstyl()
       }
    
@@ -97,12 +97,13 @@ class Map extends React.Component {
   render() {
     return (
       <div>
-        <div className="sidebarStyle">
+          {/* values */}
+        {/* <div className="sidebarStyle">
           <div>
             Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom:{" "}
             {this.state.zoom}
           </div>
-        </div>
+        </div> */}
         <div className="buttonStyle">
           <div className="btn-group" role="group" aria-label="Basic example">
           <button   type="button" className="btn btn-secondary" value="streets-v11" onClick={(e)=>{this.handleStyle(e)}}>streets</button>
