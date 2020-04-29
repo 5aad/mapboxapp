@@ -19,21 +19,21 @@ class Map extends React.Component {
         }
 
         //Custom Zoom Logic
-        // handleIncrement=()=>{
-        //   let zo = parseFloat(this.state.zoom)
+        handleIncrement=()=>{
+          let zo = parseFloat(this.state.zoom)
           
-        //   if(zo<parseFloat(22))
-        //       this.setState({
-        //         zoom:zo+parseFloat(1)
-        //       })
-        // }
-        // handleDecrement=()=>{
-        //   let zo = parseFloat(this.state.zoom)
-        //   if(zo>parseFloat(2))
-        //       this.setState({
-        //         zoom:zo-parseFloat(1)
-        //       })
-        // }
+          if(zo<parseFloat(22))
+              this.setState({
+                zoom:zo+parseFloat(1)
+              })
+        }
+        handleDecrement=()=>{
+          let zo = parseFloat(this.state.zoom)
+          if(zo>parseFloat(2))
+              this.setState({
+                zoom:zo-parseFloat(1)
+              })
+        }
         
 
     
@@ -48,15 +48,15 @@ class Map extends React.Component {
         zoom: this.state.zoom
         });
         
- 
-        const nav = new mapboxgl.NavigationControl()
-        map.addControl(nav)
+        //default zoom
+        // const nav = new mapboxgl.NavigationControl()
+        // map.addControl(nav)
         
         map.on('move', () => {
         this.setState({
         lng: map.getCenter().lng.toFixed(4),
         lat: map.getCenter().lat.toFixed(4),
-        // zoom: map.getZoom().toFixed(2)
+        zoom: map.getZoom().toFixed(2)
         });
         });
         }
@@ -88,8 +88,9 @@ class Map extends React.Component {
 
             });
             });
-            const nav = new mapboxgl.NavigationControl()
-            map.addControl(nav)
+        //default zoom
+        // const nav = new mapboxgl.NavigationControl()
+        // map.addControl(nav)
         }
      
         handleStyle=(e)=>{
@@ -101,22 +102,21 @@ class Map extends React.Component {
   render() {
     return (
       <div>
-        {/* <div className="sidebarStyle">
+        <div className="sidebarStyle">
           <div>
             Longitude: {this.state.lng} | Latitude: {this.state.lat} | Zoom:{" "}
             {this.state.zoom}
           </div>
-        </div> */}
+        </div>
         <div className="buttonStyle">
           <div className="btn-group" role="group" aria-label="Basic example">
           <button   type="button" className="btn btn-secondary" value="streets-v11" onClick={(e)=>{this.handleStyle(e)}}>streets</button>
       <button  type="button" className="btn btn-secondary" value="satellite-v9" onClick={(e)=>this.handleStyle(e)}>satellite</button>
       <button   type="button" className="btn btn-secondary" value="light-v10" onClick={(e)=>this.handleStyle(e)}>Light</button>
-      <button   type="button" className="btn btn-secondary" value="dark-v10" onClick={(e)=>this.handleStyle(e)}>Dark</button>
-      <button   type="button" className="btn btn-secondary" value="outdoors-v11" onClick={(e)=>this.handleStyle(e)}>Outdoors</button>
+     
       {/* Custom Zoom buttons */}
-      {/* <button  type="button" className="btn btn-secondary" onClick={this.handleIncrement}> +</button>
-      <button   type="button" className="btn btn-secondary" onClick={this.handleDecrement}> -</button> */}
+      <button  type="button" className="btn btn-secondary" onClick={this.handleIncrement}> +</button>
+      <button   type="button" className="btn btn-secondary" onClick={this.handleDecrement}> -</button>
           </div>
         </div>
         <div ref={(el) => (this.mapContainer = el)} className="mapContainer" />

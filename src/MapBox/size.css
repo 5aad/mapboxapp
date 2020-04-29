@@ -14,7 +14,7 @@
     .buttonStyle{
       display: inline-block;
     position: absolute;
-    top: 0px;
+    top: 40px;
     left: 0;
     margin: 12px;
   
@@ -28,7 +28,7 @@
         .buttonStyle{
             display: inline-block;
           position: absolute;
-          top: 0px;
+          top: 55px;
           left: 0;
           margin: 12px;
           margin-left: 5px;
