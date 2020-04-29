@@ -23,6 +23,22 @@
     padding: 6px;
     font-weight: bold;
     }
+
+    @media only screen and (max-width: 768px) {
+        .buttonStyle{
+            display: inline-block;
+          position: absolute;
+          top: 56px;
+          left: 0;
+          margin: 12px;
+        
+          color: #ffffff;
+          z-index: 1 !important;
+          padding: 6px;
+          font-weight: bold;
+          }
+
+    }
      
     .mapContainer {
     position: absolute;
