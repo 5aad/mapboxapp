@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2d8029be9df3ca3ca191bc9c9d27a045",
+    "revision": "880f986220750909293d2c46e8882a27",
     "url": "/mapboxapp/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mapboxapp/static/css/2.69121389.chunk.css"
   },
   {
-    "revision": "ffe464be0d9b396b1ad8",
-    "url": "/mapboxapp/static/css/main.f5e16b8d.chunk.css"
+    "revision": "17ffd3ca3612464c99bc",
+    "url": "/mapboxapp/static/css/main.5c1f6158.chunk.css"
   },
   {
     "revision": "cefae95adc85bcac622a",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mapboxapp/static/js/2.ef9d3220.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ffe464be0d9b396b1ad8",
-    "url": "/mapboxapp/static/js/main.cb19b4ad.chunk.js"
+    "revision": "17ffd3ca3612464c99bc",
+    "url": "/mapboxapp/static/js/main.31b018f7.chunk.js"
   },
   {
     "revision": "26968a650dcd70d021d0",
