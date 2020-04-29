@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/mapboxapp/static/css/main.5c1f6158.chunk.css",
+    "main.js": "/mapboxapp/static/js/main.31b018f7.chunk.js",
+    "main.js.map": "/mapboxapp/static/js/main.31b018f7.chunk.js.map",
+    "runtime-main.js": "/mapboxapp/static/js/runtime-main.c36e5738.js",
+    "runtime-main.js.map": "/mapboxapp/static/js/runtime-main.c36e5738.js.map",
+    "static/css/2.69121389.chunk.css": "/mapboxapp/static/css/2.69121389.chunk.css",
+    "static/js/2.ef9d3220.chunk.js": "/mapboxapp/static/js/2.ef9d3220.chunk.js",
+    "static/js/2.ef9d3220.chunk.js.map": "/mapboxapp/static/js/2.ef9d3220.chunk.js.map",
+    "index.html": "/mapboxapp/index.html",
+    "precache-manifest.571e341e02855f0b9bbb6f2b0898e6e1.js": "/mapboxapp/precache-manifest.571e341e02855f0b9bbb6f2b0898e6e1.js",
+    "service-worker.js": "/mapboxapp/service-worker.js",
+    "static/css/2.69121389.chunk.css.map": "/mapboxapp/static/css/2.69121389.chunk.css.map",
+    "static/css/main.5c1f6158.chunk.css.map": "/mapboxapp/static/css/main.5c1f6158.chunk.css.map",
+    "static/js/2.ef9d3220.chunk.js.LICENSE.txt": "/mapboxapp/static/js/2.ef9d3220.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c36e5738.js",
+    "static/css/2.69121389.chunk.css",
+    "static/js/2.ef9d3220.chunk.js",
+    "static/css/main.5c1f6158.chunk.css",
+    "static/js/main.31b018f7.chunk.js"
+  ]
+}
