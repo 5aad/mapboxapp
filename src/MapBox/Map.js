@@ -11,6 +11,8 @@ mapboxgl.accessToken = MAPBOX_KEY;
 // const el = document.createElement("div");
 // el.className = "marker";
 // ReactDOM.render(<div className="marker" />, el);
+
+
 class Map extends React.Component {
   mapRef = React.createRef();
   map;
