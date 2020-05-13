@@ -4,6 +4,16 @@ import * as firebase from 'firebase';
 
 
 const config = {
+  //this is your firebase config
+  // apiKey: "AIzaSyBDwvi1GGn8LiAxcCHEXeXw4k5Wz_8G25U",
+  // authDomain: "test-zero-1.firebaseapp.com",
+  // databaseURL: "https://test-zero-1.firebaseio.com",
+  // projectId: "test-zero-1",
+  // storageBucket: "test-zero-1.appspot.com",
+  // messagingSenderId: "344331762008",
+  // appId: "1:344331762008:web:2733af00957bfa6f864d2d",
+  // measurementId: "G-9NT1LE2Q07"
+  
     apiKey: "AIzaSyAWCoub6quvjEY-I4sAO3hcTlBEAfaDcc8",
     authDomain: "app-6d62c.firebaseapp.com",
     databaseURL: "https://app-6d62c.firebaseio.com",

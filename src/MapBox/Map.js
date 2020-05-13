@@ -42,8 +42,8 @@ class Map extends React.Component {
   componentDidMount() {
     firebase
       .firestore()
-      .collection("youtubeLinks")
-      .doc("IjNLTwdUDVxPafFFRABO")
+      .collection("youtubeLinks") //GeoData your collection name
+      .doc("IjNLTwdUDVxPafFFRABO") //0e992c60-942d-11ea-aa34-4b5c1ed65a32 your document ID
       .get()
       .then((doc) => {
         if (doc.exists) {
