@@ -4,7 +4,7 @@ import * as firebase from 'firebase';
 
 
 const config = {
-  //this is your firebase config
+  // this is your firebase config
   // apiKey: "AIzaSyBDwvi1GGn8LiAxcCHEXeXw4k5Wz_8G25U",
   // authDomain: "test-zero-1.firebaseapp.com",
   // databaseURL: "https://test-zero-1.firebaseio.com",

@@ -12,40 +12,49 @@ mapboxgl.accessToken = MAPBOX_KEY;
 // el.className = "marker";
 // ReactDOM.render(<div className="marker" />, el);
 
-
 class Map extends React.Component {
   mapRef = React.createRef();
   map;
 
   constructor(props) {
     super(props);
-
     this.unsubscribe = null;
     this.state = {
       lng: 5,
       lat: 34,
       zoom: 2,
-      geodata: [],
       mapStyle: "streets-v11",
       data: null,
+      collName: "youtubeLinks",
+      docName: "IjNLTwdUDVxPafFFRABO",
     };
     this.handleStyle = this.handleStyle.bind(this);
+    this.handleCollName = this.handleCollName.bind(this);
   }
 
-  componentDidUpdate() {
+  async componentDidUpdate() {
     this.setstyl();
+  
   }
   setstyl = () => {
     const style = this.state.mapStyle;
-    console.log(style);
+    // console.log(style);
     this.map.setStyle("mapbox://styles/mapbox/" + style);
   };
 
-  componentDidMount() {
+
+
+ 
+
+  async componentDidMount() {
+
+    console.log("CDidM",this.state.collName)
+    const collectionName = this.state.collName;
+    const docName = this.state.docName;
     firebase
       .firestore()
-      .collection("youtubeLinks") //GeoData your collection name
-      .doc("IjNLTwdUDVxPafFFRABO") //0e992c60-942d-11ea-aa34-4b5c1ed65a32 your document ID
+      .collection(collectionName) //GeoData your collection name IjNLTwdUDVxPafFFRABO
+      .doc(docName) //b3f71fd0-9687-11ea-8845-ab92e09d1e9d & 17305fa096b3-11a-b477-03342e794c0b your document ID
       .get()
       .then((doc) => {
         if (doc.exists) {
@@ -98,6 +107,7 @@ class Map extends React.Component {
         this.setState({ data: null });
         console.log("Error getting document:", error);
       });
+    
 
     this.map = new mapboxgl.Map({
       container: this.mapContainer,
@@ -115,12 +125,23 @@ class Map extends React.Component {
   }
 
   handleStyle = (e) => {
-    // console.log(e.target.value);
     this.setState({
       mapStyle: e.target.value,
     });
   };
+
+  handleCollName = (e) => {
+    console.log("e.target",e.target.value);
+    this.setState({
+      collName: e.target.value,
+      docName: "gfXLsVKg0v4gK6R4JUZ8",
+    });
+  };
+
+
+
   render() {
+    console.log("render",this.state.collName)
     return (
       <div>
         <div className="buttonStyle">
@@ -150,6 +171,14 @@ class Map extends React.Component {
               onClick={(e) => this.handleStyle(e)}
             >
               Light
+            </button>
+            <button
+              type="button"
+              className="btn btn-secondary"
+              value="anotherPins"
+              onClick={(e) => this.handleCollName(e)}
+            >
+              diff pins
             </button>
           </div>
         </div>
